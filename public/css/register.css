@@ -1,0 +1,18 @@
+.col-sm-4{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.col-sm-8{
+    padding-left: 0!important;
+}
+.radIn{
+    margin: 0 10px!important;
+}
+span{
+    position: relative;
+    top: -2px;
+    display: inline-block;
+}
+h2{
+    text-align: center;
+}
