@@ -16,3 +16,14 @@ span{
 h2{
     text-align: center;
 }
+.red-col{
+    color: red;
+    display: none;
+}
+button a{
+    color: #FFF;
+    text-decoration: none;
+}
+button a:hover {
+    color: #fff;
+}

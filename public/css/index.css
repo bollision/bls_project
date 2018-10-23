@@ -1,0 +1,89 @@
+.index {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .index .header {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #000;
+  }
+  
+  .index .container {
+    display: flex;
+    flex: 1;
+    width: 100%!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+  
+  .container .menu {
+    width: 180px;
+    height: 100%;
+  }
+  
+  .container .main {
+    flex: 1;
+    height: 100%;
+  }
+  
+  /* // ======== [头部样式] ======== */
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header .header_left {
+    font-size: 28px;
+    margin-left: 20px;
+  }
+  
+  .header .header_right {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .header .header_right button {
+    width: 68px;
+    height: 21px;
+    margin-top: 19px;
+    margin-left: 10px;
+    border: none;
+    background: wheat;
+    line-height: 1!important;
+  }
+
+  .header .header_right button a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* // ======== [左侧菜单] ======== */
+  .menu {
+    border-right: 1px solid #000;
+    padding-top: 25px;
+  }
+  
+  .menu .menu_item {
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  .menu li{
+      text-align: center;
+      font-size: 18px;
+  }
+
+  .menu .menu_item a{
+      text-decoration: none;
+      color: #000;
+      display: block;
+      height: 100%;
+  }
+
+  .menu .menu_item a:hover{
+    text-decoration: underline;
+    color: aquamarine;
+
+  }

@@ -32,4 +32,47 @@ router.get('/login.html',function(req,res){
 })
 
 
+//用户管理页面
+router.get('/user-manager.html',function(req,res){
+  if (parseInt(req.cookies.isAdmin)) {
+    // 需要查询数据库
+    // 从前端取得2个参数
+    let page = req.query.page || 1; // 页码数
+    let pageSize = req.query.pageSize || 5; // 每页显示的条数
+
+    usersModel.getUserList({
+      page: page,
+      pageSize: pageSize
+    }, function(err, data) {
+      if (err) {
+        res.render('werror', err);
+      } else {
+        res.render('user-manager', {
+          username: req.cookies.username,
+          nickname: req.cookies.nickname,
+          isAdmin: parseInt(req.cookies.isAdmin) ? '(管理员)' : '',
+          userList: data.userList,
+          totalPage: data.totalPage,
+          page: data.page
+        });
+      }
+    });
+  }
+})
+
+
+//手机管理页面
+router.get('/mobile-manager.html',function(req,res){
+  if(req.cookies.username && parseInt(req.cookies.isAdmin)){
+    res.render('mobile-manager', {
+      username: req.cookies.username,
+      nickname: req.cookies.nickname,
+      isAdmin: parseInt(req.cookies.isAdmin) ? '(管理员)' : '',
+    });
+  }else{
+    res.redirect('/login.html')
+  }
+})
+
+
 module.exports = router;

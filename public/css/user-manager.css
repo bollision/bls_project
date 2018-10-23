@@ -1,0 +1,114 @@
+.main .seach-box{
+    margin: 30px 50px 20px;
+}
+
+.main .seach-box .seach{
+    width: 220px;
+    height: 34px;
+    padding-left: 10px;
+}
+
+.main .seach-box .seachbtn{
+    width: 72px;
+    height: 34px;
+    margin-left: 15px;
+    background: rgb(221, 255, 235);
+}
+
+.main .seach-box .seachbtn:hover{
+    color: green;
+    text-decoration: underline;
+}
+
+.main .usertab{
+    margin-left: 50px;
+    border: 2px solid #000000;
+    width: 930px;
+    line-height: 40px;
+}
+
+.main .usertab th{
+    text-align: center!important;
+}
+
+.main .usertab tbody{
+    text-align: center!important;
+}
+
+.main .nav{
+    float: right;
+    margin-right: 200px
+}
+
+
+#updateForm{
+    width: 480px;
+    position: absolute;
+    top: 88px;
+    left: 524px;
+    background-color: gray;
+    background-size:100% 100%; 
+    display: none;
+    padding: 30px 50px;
+    border-radius: 5px;
+  }
+  #idNone{
+    display: none;
+  }
+  #updateForm h3{
+    font-weight: normal;
+    font-size: 26px;
+    text-align: center;
+  }
+  #updateForm label{
+    font-size: 16px;
+    margin-right: 10px;
+    width: 90px;
+    text-align-last: justify;
+    display: inline-block;
+  }
+  #updateForm input[type='text']{
+    outline: none;
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    border: 1px solid #33a3dd;
+    border-radius: 4px;
+  }
+  #updateForm div{
+    margin: 20px 10px;
+  }
+  #updateForm button{
+    width: 80px;
+    line-height: 30px;
+    outline: none;
+    border: 1px solid rgba(121, 111, 58, 0.65);
+    border-radius: 5px;
+    background: #798270;
+    color: #fff;
+    text-align: center;
+    margin:10px 0 0 65px;
+  }
+  #updateForm button:hover{
+    background: #ff1100;
+    border-color: #ff1100;
+  }
+  #updateForm i{
+    display: inline-block;
+    width: 80px;
+    line-height: 30px;
+    outline: none;
+    border: 1px solid rgba(121, 111, 58, 0.65);
+    border-radius: 5px;
+    background: #798270;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 60px;
+  }
+  #updateForm i:hover{
+    background: #ff1100;
+    border-color: #ff1100;
+  }
