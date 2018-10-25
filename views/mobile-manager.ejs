@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/mobile-manager.css">
   <style>
     .active{
       background: red;
@@ -21,11 +22,123 @@
     <div class="container">
       <%- include('./common/menu.ejs', { isAdmin: isAdmin }) %>
       <div class="main">
-        <p>Welcome</p>
-        <p>主体部分</p>
+        <!-- 新增手机按钮 -->
+        <div>
+          <button class="add-phone-btn" id="addPhone">新增手机</button>
+        </div>
+        <!-- 新增手机表单 -->
+        <div class="phone-sub" id="addPhoneWrap">
+          <form action="javascript:;" enctype="multipart/form-data">
+            <h2 style="text-align:center;">新增手机</h2>
+            <div class="list-phone">
+              <label class="lable-style">名称</label>
+              <input type="text" name="phonename" id="phoneName" placeholder="请输入手机名称">
+            </div>
+            <div class="list-phone">
+              <label class="lable-style">品牌</label>
+              <select id="phoneBrand">
+                <option value="苹果" selected>苹果</option>
+                <option value="小米">小米</option>
+                <option value="三星">三星</option>
+                <option value="华为">华为</option>
+                <option value="魅族">魅族</option>
+                <option value="oppo">oppo</option>
+                <option value="vivo">vivo</option>
+              </select>
+            </div>
+            <div class="list-phone">
+              <label class="lable-style">官方指导价</label>
+              <input type="text" name="guideprice" id="phoneGuideP" placeholder="请输入官方指导价">
+            </div>
+            <div class="list-phone">
+              <label class="lable-style">二手回收价</label>
+              <input type="text" name="recoveryprice" id="phoneRecoverP" placeholder="请输入二手回收价">
+            </div>
+            <div class="list-phone">
+              <label class="lable-style">图片</label>
+              <input type="file" class="imgfile" id="phoneImg">
+            </div>
+
+            <div class="list-phone" style="text-align:center">
+              <input type="submit" value="新增" style="width:50px;height:25px;margin-right:15px;" id="add">
+              <button id="cancel" style="width:50px;height:25px;">取消</button>
+            </div>
+          </form>
+        </div>
+        <!-- 手机列表 -->
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>图片</th>
+                <th>手机名称</th>
+                <th>手机品牌</th>
+                <th>官方指导价</th>
+                <th>二手回收价</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="list-body">
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul id="pageEl" style="margin-top:10px;margin-right: 10px;"></ul>
+        </div>
+        <!-- 修改手机信息表单 -->
+        <div class="rewrite-phone" id="rewrite-phone">
+            <h2>修改手机信息</h2>
+            <div style="display: none">
+              <input type="text" id="rewrite-id">
+            </div>
+            <div>
+              <span>名称：</span>
+              <input type="text" name="" id="rewrite-name" value="">
+            </div>
+            <div>
+              <span>品牌：</span>
+              <select id="rewrite-brand">
+                <option value="苹果">苹果</option>
+                <option value="小米">小米</option>
+                <option value="三星">三星</option>
+                <option value="华为">华为</option>
+                <option value="魅族">魅族</option>
+                <option value="oppo">oppo</option>
+                <option value="vivo">vivo</option>
+              </select>
+            </div>
+            <div>
+              <span>官方指导价：</span>
+              <input type="text" name="" id="rewrite-gp" value="">
+              <br />
+            </div>
+            <div>
+              <span>二手回收价：</span>
+              <input type="text" name="" id="rewrite-rp" value="">
+              <br />
+            </div>
+            <div>
+              <span>图片：</span>
+              <input type="file" class="" id="rewrite-img">
+              <br />
+            </div>
+           <div>
+             <button id="rewrite-btn"> 确认修改</button>
+             <button id="rewrite-cancle"> 取消修改</button>
+           </div>
+        </div>
       </div>
     </div>
   </div>
-
 </body>
 </html>
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/js/mobile.js"></script>

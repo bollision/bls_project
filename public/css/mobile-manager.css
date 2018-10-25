@@ -1,0 +1,112 @@
+.add-phone-btn{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 25px 70px;
+}
+.add-phone-btn:hover{
+    background: gray;
+    color: white;
+}
+
+.phone-sub{
+    padding: 30px 15px 10px;
+    background-color: white;
+    border: 1px solid slategray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: none;
+}
+
+.table{
+    margin-top: 20px;
+    padding-left: 70px; 
+}
+table, th, td {
+    border: 1px solid black;
+    height: 50px;
+}
+table{
+    width: 75%;
+}
+td,th{
+    text-align: center;
+    max-height: 85px;
+}
+
+
+
+
+.imgfile {
+    display: inline-block!important;
+}
+.lable-style {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 80px;
+    height: 22px;
+    text-align: right;
+}
+h2{
+    margin-bottom: 20px;
+}
+.list-phone{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.list-phone input{
+    height: 30px;
+}
+
+img{
+    max-width: 100px!important;
+}
+
+
+
+
+
+
+.rewrite-phone{
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: lightgray;
+    display: none;
+    padding-top: 25px;
+}
+
+.rewrite-phone h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.rewrite-phone span {
+    display: inline-block;
+    width: 85px;
+    text-align: right;
+    margin-left: 60px;
+    margin-bottom: 15px;
+}
+
+.rewrite-phone input{
+    display: inline-block;
+}
+
+#rewrite-btn {
+    margin-top: 10px;
+    margin-left: 140px;
+    margin-right: 40px;
+}
+

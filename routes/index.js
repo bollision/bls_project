@@ -21,7 +21,6 @@ router.get('/', function(req, res, next) {
 
 });
 
-
 //注册界面
 router.get('/register',function(req,res){
   res.render('register.ejs');
@@ -63,7 +62,7 @@ router.get('/user-manager.html',function(req,res){
 
 //手机管理页面
 router.get('/mobile-manager.html',function(req,res){
-  if(req.cookies.username && parseInt(req.cookies.isAdmin)){
+  if(req.cookies.username){
     res.render('mobile-manager', {
       username: req.cookies.username,
       nickname: req.cookies.nickname,
