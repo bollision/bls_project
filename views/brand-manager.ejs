@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/brand.css">
+  
+  <style>
+    .choice{
+      background: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="index">
+    <%- include('./common/header.ejs', { nickname: nickname, isAdmin: isAdmin }) %>
+    <div class="container">
+      <%- include('./common/menu.ejs', { isAdmin: isAdmin }) %>
+      <div class="main">
+        <!-- 新增品牌按钮 -->
+        <div class="main-header">
+          <button class="addBrand" id="addBrand">新增品牌</button>
+        </div>
+        
+        <!-- 手机列表 -->
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>品牌</th>
+                <th>品牌名称</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="list-body">
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul id="pageEl" style="margin-top:10px;margin-right: 10px;"></ul>
+        </div>
+        <!-- 新增品牌信息表单 -->
+        <div class="addInfo" id="addInfo">
+            <h2>新增品牌信息</h2>
+            <div>
+              <label>品牌：</label>
+              <input type="file" id="brand" style="display:inline-block">
+            </div>
+            <div>
+              <label>品牌名称：</label>
+              <input type="text" id="addBrandName">
+            </div>
+            <div style="text-align:center">
+              <button id="add">确认添加</button>
+              <button id="cancleBrand">无情拒绝</button>
+            </div>
+        </div>
+        <!-- 修改品牌信息表单 -->
+        <div class="resetInfo" id="resetInfo">
+          <h2>修改品牌信息</h2>
+          <div style="display:none;">
+            <label >ID</label>
+            <input type="text" name="" id="resetBrandId">
+          </div>
+          <div>
+            <label>品牌：</label>
+            <input type="file" id="resetBrand" style="display:inline-block">
+          </div>
+          <div>
+            <label>品牌名称：</label>
+            <input type="text" id="resetBrandName">
+          </div>
+          <div style="text-align:center">
+            <button id="resetBtn">确认修改</button>
+            <button id="cancleBtn">我再想想</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/js/brand.js"></script>

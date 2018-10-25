@@ -1,0 +1,57 @@
+.main-header{
+    padding-left: 100px;
+    height: 80px;
+    border-bottom: 2px solid darkgray;
+}
+.addBrand{
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(206, 211, 211);
+}
+
+.table{
+    padding-left: 100px;
+    padding-top: 30px;
+}
+table,td,th{
+    border: 1px solid black;
+    text-align: center;
+}
+table{
+    width: 70%;
+}
+td,th{
+    height: 50px;
+}
+
+.addInfo,.resetInfo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid wheat;
+    background: wheat;
+    display: none;
+}
+.addInfo label,.resetInfo label{
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    margin-bottom: 20px;
+    margin-left: 44px;
+}
+.addInfo h2,.resetInfo h2{
+    text-align: center;
+    padding-bottom: 25px;
+}
+.addInfo button,.resetInfo button{
+    width: 70px;
+    height: 30px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+img{
+    height: 70px;
+}
